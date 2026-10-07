@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbf6f1">
+<title>Ever After — Our Little Love Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf8f3;--ink:#534048;--muted:#97858b;--rose:#bb7488;--pink:#efd1d8;--line:#eadfe0;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.7}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,[contenteditable]:focus-visible{outline:3px solid #b889b8;outline-offset:5px}::selection{background:#efd0dc}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:var(--serif);font-weight:500}.container{max-width:1120px;margin:auto;padding:0 40px}header{height:90px;position:relative;z-index:5;border-bottom:1px solid #eee5e2;background:#fbf8f3e8}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:500 24px var(--serif);display:flex;align-items:center;gap:10px}.brand-icon{width:31px;height:31px;background:#f6e3e6;border-radius:50%;display:grid;place-items:center;color:var(--rose);font-size:17px}.brand span:last-child{font-style:italic}nav{display:flex;gap:30px;font-size:12px;color:#8c787f}nav a{transition:color .2s}nav a:hover{color:var(--rose)}.music-button{border:1px solid #e7d9dc;border-radius:30px;background:#fff8;color:#826670;padding:9px 15px;font-size:11px;display:flex;align-items:center;gap:9px}.music-icon{color:var(--rose);font-size:17px}.playing .music-icon{animation:sway 2s infinite}.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 77% 43%,#f5dfe4aa,transparent 47%),radial-gradient(ellipse at 20% 10%,#f5eaf380,transparent 55%)}.hero-inner{min-height:610px;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;position:relative}.hero-copy{padding:60px 0 80px;position:relative;z-index:2}.eyebrow{font-size:10px;letter-spacing:2.3px;text-transform:uppercase;color:#aa8490;display:flex;align-items:center;gap:9px;font-weight:600}.tiny-heart{font-size:15px;letter-spacing:0}h1{font-size:clamp(46px,5.2vw,68px);line-height:1.15;letter-spacing:-2px;margin:22px 0}h1 em{color:var(--rose);font-weight:400}.hero-description{font-size:14px;color:#96818a;max-width:295px;line-height:1.85}.primary{background:#bc7c8e;color:white;border:1px solid #bc7c8e;border-radius:50px;padding:13px 23px;display:inline-flex;align-items:center;justify-content:center;gap:17px;box-shadow:0 7px 19px #ae758524;transition:transform .25s,background .25s,box-shadow .25s;font-size:12px;font-weight:500}.primary:hover{transform:translateY(-3px);background:#ac687c;box-shadow:0 10px 24px #ae758539}.hero .primary{margin-top:28px}.arrow{font-size:17px}.hero-note{margin-top:24px;display:flex;align-items:center;gap:8px;font-size:10px;color:#a9959d}.hero-note span:first-child{font-size:15px;color:#bda3bd}.hero-art{height:465px;position:relative;perspective:900px;isolation:isolate}.heart-stage{position:absolute;inset:0}.heart-stage canvas{width:100%;height:100%;display:block}.heart-fallback{position:absolute;top:37%;left:33%;width:145px;height:145px;background:linear-gradient(135deg,#fcdde3,#d991a6);transform:rotate(-45deg);border-radius:22px;box-shadow:-16px 18px 55px #c784a643,inset 6px 6px 20px #ffe7ed;animation:heartbeat 4s infinite}.heart-fallback:before,.heart-fallback:after{content:"";position:absolute;width:145px;height:145px;border-radius:50%;background:inherit}.heart-fallback:before{top:-72px}.heart-fallback:after{left:72px}.orbit{position:absolute;width:350px;height:140px;border:1px solid #d3b1ba55;border-radius:50%;left:50%;top:53%;transform:translate(-50%,-50%) rotate(-20deg);z-index:-1}.orbit.two{width:310px;height:330px;transform:translate(-50%,-50%) rotate(27deg);border-style:dashed;opacity:.55}.art-label{position:absolute;padding:11px 16px;border-radius:12px;background:#fff9;border:1px solid #fff;backdrop-filter:blur(10px);box-shadow:0 8px 24px #9577850b;font-size:11px;color:#997982;animation:float 6s ease-in-out infinite;display:flex;gap:8px;align-items:center}.label-one{left:0;top:26%;transform:rotate(-8deg)}.label-two{right:0;bottom:23%;transform:rotate(7deg);animation-delay:-3s}.label-three{bottom:11%;left:21%;font:italic 15px var(--serif);background:none;border:0;box-shadow:none}.spark{position:absolute;color:#be97ac;font-size:22px;animation:twinkle 5s ease-in-out infinite}.s1{top:14%;left:43%}.s2{right:5%;top:39%;font-size:30px;animation-delay:-2s}.s3{bottom:18%;left:2%;font-size:18px;animation-delay:-1s}.s4{right:23%;top:13%;font-size:12px}.floating-heart{position:absolute;color:#d1a4b5;font-size:25px;opacity:.65;animation:float 7s infinite}.fh1{top:17%;right:15%;transform:rotate(20deg)}.fh2{bottom:19%;left:13%;font-size:19px;animation-delay:-4s}.scroll-hint{text-align:center;padding-bottom:24px;color:#b3a0a5;font-size:9px;letter-spacing:1.3px;display:flex;justify-content:center;gap:12px;align-items:center}.scroll-hint:before,.scroll-hint:after{content:"";height:1px;width:35px;background:#e5d9dc}.divider{height:1px;background:linear-gradient(90deg,transparent,#e5d9dc,transparent)}.section{padding-top:74px;padding-bottom:74px}.section-heading{text-align:center}.section-heading .eyebrow{justify-content:center;font-size:9px}.section-heading h2{font-size:35px;line-height:1.4;letter-spacing:-.8px;margin:9px 0}.section-heading p{font-size:12px;color:var(--muted)}.section-heading h2 .symbol{color:#c898ac;font-family:var(--sans);font-size:24px;vertical-align:middle;margin-left:7px}.section-row{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:30px}.section-row .section-heading{text-align:left}.section-row .eyebrow{justify-content:flex-start}.outline-button{background:#fff7;border:1px solid #e5d2d9;color:#a27887;border-radius:30px;padding:9px 16px;font-size:11px;display:inline-flex;gap:9px;align-items:center;transition:background .2s,transform .2s;white-space:nowrap}.outline-button:hover{background:#f6e8ed;transform:translateY(-2px)}.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px;align-items:start}.photo-card{padding:10px 10px 0;background:#fff;border:1px solid #eee5e4;border-radius:13px;box-shadow:0 8px 25px #76586208;transition:transform .4s,box-shadow .4s;position:relative}.photo-card:nth-child(3n+1){transform:rotate(-2deg)}.photo-card:nth-child(3n+2){margin-top:18px;transform:rotate(1.5deg)}.photo-card:nth-child(3n){transform:rotate(-1deg)}.photo-card:hover{transform:translateY(-6px) rotate(0) perspective(900px) rotateX(2deg);box-shadow:0 15px 30px #76586215}.photo-card img{width:100%;height:230px;object-fit:cover;display:block;border-radius:7px;background:#eedce0}.photo-caption{padding:15px 7px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}.photo-caption h3{font-size:17px}.photo-caption p{font-size:9px;color:#ad949e;margin-top:2px;letter-spacing:.4px}.card-heart{color:#c8a3b2;font-size:18px}.replace-photo{position:absolute;right:18px;top:18px;border:1px solid #fff9;background:#fff9;backdrop-filter:blur(8px);border-radius:50%;width:29px;height:29px;color:#765866;font-size:14px;opacity:0;transition:opacity .2s}.photo-card:hover .replace-photo,.replace-photo:focus-visible{opacity:1}.upload-note{text-align:center;color:#b09ba4;font-size:10px;margin-top:28px}.message-section{background:linear-gradient(120deg,#f6edef80,#f1ebf380);padding:62px 0}.message-card{max-width:730px;margin:27px auto 0;padding:35px 54px 28px;text-align:center;border:1px solid #fff;border-radius:20px;background:#fff8;box-shadow:0 8px 40px #91718308;position:relative}.quote-mark{font:60px var(--serif);line-height:.7;color:#dab8c5}.message-text{font:400 19px/1.9 var(--serif);color:#876e78;margin:15px 0;white-space:pre-wrap;min-height:110px}.message-signature{font:italic 17px var(--serif);color:#bb879a;margin-top:15px}.edit-button{background:none;border:0;color:#ae96a2;font-size:10px;padding:8px 12px;margin-top:12px}.edit-button:hover{color:#985b75}[contenteditable=true]{border-radius:8px;background:#fff9;outline:1px dashed #d6aebe;padding:8px}.timeline{max-width:780px;margin:36px auto 0;position:relative}.timeline:before{content:"";position:absolute;left:28px;top:20px;bottom:30px;width:1px;background:linear-gradient(#e7d5dc,#d7bbd6,#e7d5dc)}.milestone{position:relative;padding-left:73px;margin-bottom:14px}.timeline-dot{position:absolute;left:14px;top:20px;width:29px;height:29px;display:grid;place-items:center;border:5px solid var(--cream);border-radius:50%;background:#f0dce5;color:#b17f98;font-size:10px;z-index:1}.milestone:nth-child(even) .timeline-dot{background:#e9dfed;color:#a78db2}.milestone details{background:#fff8;border:1px solid #eadfe3;border-radius:13px;transition:background .2s;overflow:hidden}.milestone details[open]{background:#fff}.milestone summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;gap:15px}.milestone summary::-webkit-details-marker{display:none}.milestone-title{font:17px var(--serif);flex:1}.date-label{font-size:9px;color:#aa919e;letter-spacing:.8px;text-transform:uppercase}.expand-icon{font-size:16px;color:#b798a7;transition:transform .2s}.milestone details[open] .expand-icon{transform:rotate(45deg)}.milestone-body{padding:0 22px 20px;color:#97818d;font-size:12px}.milestone-body p{max-width:520px}.milestone-tools{display:flex;gap:15px;margin-top:12px;align-items:center}.milestone-tools button{font-size:10px;border:0;background:none;color:#b38196;padding:4px 0}.timeline-photo{max-width:220px;width:100%;height:145px;object-fit:cover;border-radius:8px;margin-top:15px}.milestone:last-child{margin-bottom:0}.surprise-section{padding:30px 0 65px}.surprise-card{text-align:center;background:radial-gradient(ellipse at 50% 0,#f6e0e5,transparent 65%),linear-gradient(110deg,#f4ebf0,#f9efec);border:1px solid #eddee4;border-radius:24px;padding:42px 25px 35px;position:relative;overflow:hidden}.envelope{font-size:35px;display:block;line-height:1.4;color:#b37a91;transform:rotate(-8deg)}.surprise-card h2{font-size:29px;margin:12px 0 8px}.surprise-card>p{font-size:12px;color:#a48a96}.surprise-buttons{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:23px}.surprise-buttons .outline-button{background:#fff6;padding:12px 21px}.hidden-message{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease,opacity .6s;opacity:0}.hidden-message.open{grid-template-rows:1fr;opacity:1}.hidden-message>div{overflow:hidden}.hidden-message p{font:italic 19px/1.7 var(--serif);padding:26px 10px 0;color:#a76f87}.corner-spark{position:absolute;color:#d5b4c8;top:33%;left:8%;font-size:26px}.corner-spark.right{left:auto;right:9%;top:57%;font-size:19px}footer{border-top:1px solid #ede3e5;padding:29px 20px;text-align:center}footer p{font:italic 14px var(--serif);color:#a58c97}footer small{display:block;font-size:9px;letter-spacing:1.1px;color:#bcabb2;margin-top:8px}.footer-heart{display:inline-block;color:#bf7f98;animation:pulse 3s infinite}.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px;background:#6b43555c;backdrop-filter:blur(8px)}.modal.open{display:flex}.modal-card{background:linear-gradient(145deg,#fffaf7,#f9e9f0);border:1px solid #fff;border-radius:27px;max-width:470px;width:100%;text-align:center;padding:45px 38px;box-shadow:0 25px 90px #69425933;position:relative;animation:appear .5s both}.modal-close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px;color:#ad879b}.modal-heart{display:block;font-size:56px;color:#c18098;animation:pulse 2s infinite}.modal-card h2{font-size:30px;margin:17px 0}.modal-card p{font:20px/1.8 var(--serif);color:#99788a;margin-bottom:25px}.burst{position:fixed;pointer-events:none;z-index:110;font-size:20px;animation:burst 3.5s ease-out forwards}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);padding:11px 20px;background:#fff;border:1px solid #edd8e3;box-shadow:0 10px 30px #6e4b6120;border-radius:30px;font-size:12px;z-index:120;opacity:0;transition:.3s;pointer-events:none;text-align:center;min-width:230px}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#edbdd410,transparent 65%);pointer-events:none;z-index:0;transform:translate(-50%,-50%)}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -12px}}@keyframes twinkle{0%,100%{opacity:.3;scale:.85}50%{opacity:.8;scale:1.1}}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}@keyframes heartbeat{0%,100%{transform:rotate(-45deg) scale(1)}50%{transform:rotate(-45deg) scale(1.04)}}@keyframes sway{50%{transform:rotate(15deg)}}@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.95)}to{opacity:1;transform:none}}@keyframes burst{0%{opacity:0;transform:translate(0,0) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--rot))}}
+@media(min-width:1300px){.hero-inner{min-height:650px}.hero-art{height:500px}}
+@media(max-width:800px){.container{padding:0 25px}nav{gap:17px}.hero-inner{min-height:530px}.hero-art{height:370px}.hero-copy{padding:50px 0}h1{font-size:49px}.art-label{font-size:9px;padding:8px 11px}.label-one{left:-15px}.orbit{width:270px}.orbit.two{width:260px;height:280px}.photo-card img{height:180px}.memory-grid{gap:14px}.photo-caption h3{font-size:14px}.message-card{padding:30px}.section{padding-top:55px;padding-bottom:55px}.brand{font-size:21px}}
+@media(max-width:600px){header{height:74px}.container{padding:0 23px}nav{display:none}.music-button{font-size:10px;padding:7px 12px}.brand{font-size:21px}.hero-inner{grid-template-columns:1fr;text-align:center}.hero-copy{padding:46px 0 0}.hero .eyebrow{justify-content:center}h1{font-size:50px;margin:16px 0;letter-spacing:-1.8px}.hero-description{margin:auto;font-size:12px;max-width:270px}.hero .primary{margin-top:21px}.hero-note{justify-content:center;margin-top:18px}.hero-art{height:330px;width:100%;max-width:380px;margin:auto}.label-one{left:0;top:23%}.label-two{right:0;bottom:22%}.label-three{bottom:6%;left:25%}.hero-note{font-size:9px}.scroll-hint{padding-bottom:23px}.section-row{align-items:flex-start;gap:10px}.section-heading h2{font-size:29px}.section-heading p{font-size:11px}.section-row .outline-button{margin-top:24px;padding:8px 12px;font-size:10px}.memory-grid{grid-template-columns:1fr;gap:22px;max-width:340px;margin:auto}.photo-card img{height:250px}.photo-card:nth-child(3n+2){margin-top:0}.photo-caption h3{font-size:19px}.photo-caption{padding:15px 9px}.replace-photo{opacity:1}.message-section{padding:48px 0}.message-card{padding:28px 22px 20px;margin-top:22px}.message-text{font-size:17px;line-height:1.85}.section{padding:47px 0}.timeline{margin-top:27px}.timeline:before{left:13px}.timeline-dot{left:0;top:20px}.milestone{padding-left:40px}.milestone summary{padding:17px 15px;gap:8px;flex-wrap:wrap}.milestone-title{font-size:16px;flex-basis:75%}.date-label{order:3;flex-basis:100%;padding-top:0}.milestone-body{padding:0 15px 17px}.surprise-section{padding-bottom:45px}.surprise-card{padding:32px 15px}.surprise-card h2{font-size:26px}.surprise-buttons{gap:10px;flex-wrap:wrap}.surprise-buttons button{font-size:11px}.corner-spark{left:5%;font-size:17px}.modal-card{padding:40px 25px}.modal-card p{font-size:18px}.cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="cursor-glow" aria-hidden="true"></div>
+<header>
+<div class="container nav">
+<a href="#" class="brand" aria-label="Ever After home"><span class="brand-icon">♡</span><span>ever after</span></a>
+<nav aria-label="Main navigation"><a href="#memories">Our memories</a><a href="#message">A little message</a><a href="#story">Our story</a></nav>
+<button class="music-button" id="musicButton" aria-pressed="false"><span class="music-icon">♫</span><span id="musicLabel">Play our soundtrack</span></button>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-copy">
+<div class="eyebrow"><span class="tiny-heart">♡</span> A little corner of the world, just for us</div>
+<h1>Our Little<br><em>Love Story.</em><span style="font-size:.42em;vertical-align:middle;color:#c28da1;margin-left:12px">♡</span></h1>
+<p class="hero-description">Two hearts, countless memories,<br>one beautiful story.</p>
+<a class="primary" href="#memories">Enter Our Story <span class="arrow">↗</span></a>
+<div class="hero-note"><span>✧</span> Every little moment. Forever a favorite.</div>
+</div>
+<div class="hero-art" aria-label="A softly glowing, floating three-dimensional pink heart">
+<div class="orbit"></div><div class="orbit two"></div>
+<div id="heartStage" class="heart-stage"><div class="heart-fallback" id="heartFallback"></div></div>
+<div class="art-label label-one"><span style="color:#bc8598">♡</span> you + me, always</div>
+<div class="art-label label-two"><span style="color:#b797bc">✧</span> my favorite kind of magic</div>
+<div class="art-label label-three">a love like no other</div>
+<span class="spark s1" aria-hidden="true">✧</span><span class="spark s2" aria-hidden="true">✧</span><span class="spark s3" aria-hidden="true">✦</span><span class="spark s4" aria-hidden="true">✦</span>
+<span class="floating-heart fh1" aria-hidden="true">♡</span><span class="floating-heart fh2" aria-hidden="true">♡</span>
+</div>
+</div>
+<a class="scroll-hint" href="#memories">SCROLL TO OUR LITTLE WORLD ↓</a>
+</section>
+<div class="divider"></div>
+<section class="section container reveal" id="memories">
+<div class="section-row">
+<div class="section-heading"><div class="eyebrow">THE MOMENTS WE KEEP</div><h2>Our Memories <span class="symbol">♡</span></h2><p>Little snapshots. Big feelings. All ours.</p></div>
+<button class="outline-button" id="addPhotos"><span>＋</span> Add a memory</button>
+</div>
+<div class="memory-grid" id="memoryGrid"></div>
+<input type="file" id="photoInput" accept="image/*" multiple class="visually-hidden" aria-label="Choose memory photos">
+<p class="upload-note">✧ A little collection of us. Add your own photos to make it yours.</p>
+</section>
+<section class="message-section" id="message">
+<div class="container reveal">
+<div class="section-heading"><div class="eyebrow">FROM MY HEART TO YOURS</div><h2>A Little Message For You</h2><p>Some things are easier to write than to say.</p></div>
+<div class="message-card">
+<div class="quote-mark" aria-hidden="true">“</div>
+<p class="message-text" id="loveMessage">Somehow, out of all the people in this world, our paths found each other. And honestly, that is one of my favorite things about life. Every laugh, every little moment, every memory with you means more than I can explain. ❤️</p>
+<div class="message-signature">Always, and a little more each day.</div>
+<button class="edit-button" id="editMessage">✎ Make this message yours</button>
+</div>
+</div>
+</section>
+<section class="section container reveal" id="story">
+<div class="section-heading"><div class="eyebrow">HOW OUR FOREVER BEGAN</div><h2>Our Story <span class="symbol">✧</span></h2><p>Every chapter brought me a little closer to you.</p></div>
+<div class="timeline" id="timeline"></div>
+<p class="upload-note">Tap a chapter to open it. Every date and detail can be made your own.</p>
+</section>
+<section class="container surprise-section reveal">
+<div class="surprise-card">
+<span class="corner-spark" aria-hidden="true">✧</span><span class="corner-spark right" aria-hidden="true">✧</span>
+<span class="envelope" aria-hidden="true">♡</span>
+<div class="eyebrow" style="justify-content:center;margin-top:12px;font-size:9px">JUST BETWEEN US</div>
+<h2>A little love, waiting for you.</h2>
+<p>Some surprises don't need a special occasion.</p>
+<div class="surprise-buttons"><button class="primary" id="openHeart">Open My Heart <span>♡</span></button><button class="outline-button" id="oneMore" aria-expanded="false" aria-controls="extraMessage">One More Thing… <span>✧</span></button></div>
+<div class="hidden-message" id="extraMessage"><div><p>If I could do it all again, I would still choose you.<br>In every lifetime. In every little universe. ♡</p></div></div>
+</div>
+</section>
+</main>
+<footer><p>Made with love, for my favorite person. <span class="footer-heart" aria-label="love">❤️</span></p><small>OUR LITTLE WORLD. OUR FOREVER STORY.</small></footer>
+<div class="modal" id="heartModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+<div class="modal-card"><button class="modal-close" id="closeModal" aria-label="Close love message">×</button><span class="modal-heart" aria-hidden="true">♥</span><div class="eyebrow" style="justify-content:center">A SECRET I'LL NEVER KEEP</div><h2 id="modalTitle">It's always been you.</h2><p>You are my favorite chapter, my safest place, and my happiest thought. ❤️</p><button class="primary" id="sendLove">Sending you all my love <span>♡</span></button></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.1/three.min.js"></script>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let toastTimer;
+function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),3300)}
+function read(key,fallback){try{return JSON.parse(sessionStorage.getItem(key))||fallback}catch{return fallback}}
+function save(key,value){try{sessionStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.09}):null;
+document.querySelectorAll('.reveal').forEach(el=>observer?observer.observe(el):el.classList.add('visible'));
+
+// Original illustrated placeholders. To use personal images, replace each "src"
+// below with its named path, for example: src: "images/photo1.jpg".
+function illustration(n){
+const sky=['#efc4b8','#d6c4d7','#e4bcad'][n], low=['#f5d6ad','#ede0d9','#f4d3b9'][n];
+const settings=[
+'<circle cx="345" cy="120" r="46" fill="#fff3d3" opacity=".85"/><path d="M0 220Q90 195 175 225T500 215V400H0Z" fill="#d8b6a7"/><path d="M0 265Q110 247 230 270T500 260" fill="none" stroke="#f4ddc5" stroke-width="5"/><path d="M0 293Q130 276 280 296T500 290" fill="none" stroke="#f3d7bd" stroke-width="3"/>',
+'<path d="M0 230L75 160 138 190 240 95 340 198 425 140 500 190V400H0" fill="#9e9dab" opacity=".6"/><path d="M0 270Q125 202 245 256T500 234V400H0" fill="#acb1a3"/><path d="M0 316Q180 265 500 300V400H0" fill="#929c90"/><g stroke="#718575" stroke-width="5"><path d="M52 300V140M451 300V105"/></g><g fill="#829383"><path d="M52 100L10 205H94ZM52 143L0 253H106ZM451 72L409 190H493ZM451 126L391 257H510Z"/></g>',
+'<circle cx="110" cy="105" r="47" fill="#fff1ce" opacity=".7"/><path d="M0 237Q130 222 250 240T500 226V400H0" fill="#bb9d91"/><g fill="#d0afa1"><path d="M0 160H80V280H0Z"/><path d="M390 137H500V285H390Z"/></g><g stroke="#b1877c" stroke-width="3"><path d="M400 157H489M400 185H489M400 211H489M15 184H70M15 212H70"/></g><path d="M0 325H500" stroke="#efd1b6" stroke-width="3"/>'
+][n];
+return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400"><defs><linearGradient id="bg" x2=".4" y2="1"><stop stop-color="${sky}"/><stop offset="1" stop-color="${low}"/></linearGradient><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".055"/></feComponentTransfer></filter></defs><rect width="500" height="400" fill="url(#bg)"/>${settings}<ellipse cx="260" cy="365" rx="99" ry="13" fill="#6e5653" opacity=".15"/><g><path d="M188 252Q170 284 169 334L178 385H223L229 287 216 254Z" fill="#8c7873"/><path d="M192 243Q175 228 186 205Q205 186 224 207L225 245Z" fill="#614d48"/><ellipse cx="208" cy="229" rx="17" ry="23" fill="#c8937b"/><path d="M194 208Q214 189 228 216L197 218Z" fill="#64504b"/><path d="M264 252Q242 271 235 337L247 385H310L310 303 290 252Z" fill="#f0ddd1"/><ellipse cx="276" cy="229" rx="18" ry="23" fill="#cc9b84"/><path d="M253 246Q247 216 262 200Q291 187 301 219L298 269 279 251 284 215 266 212 264 249Z" fill="#67514c"/><path d="M219 276Q245 284 257 278" stroke="#c4957f" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M177 306L205 333M301 299L285 333" stroke="#c79982" stroke-width="11" stroke-linecap="round"/></g><g fill="#fff9ec" opacity=".7"><circle cx="70" cy="76" r="2"/><circle cx="330" cy="57" r="2"/><circle cx="411" cy="179" r="2"/></g><rect width="500" height="400" filter="url(#noise)" opacity=".6"/></svg>`);
+}
+let memories=read('ever-memories',null)||[
+{src:illustration(0),path:'images/photo1.jpg',title:'Just you & me',date:'OUR FAVORITE PLACE'},
+{src:illustration(1),path:'images/photo2.jpg',title:'The little adventures',date:'WHEREVER, TOGETHER'},
+{src:illustration(2),path:'images/photo3.jpg',title:'A moment, forever',date:'THE SIMPLE KIND OF HAPPY'}
+];
+let replaceIndex=null;
+function renderMemories(){
+$('memoryGrid').replaceChildren();
+memories.forEach((m,i)=>{
+const card=document.createElement('article');card.className='photo-card';
+const image=document.createElement('img');image.src=m.src;image.alt=m.title;image.dataset.personalPath=m.path||'';image.loading='lazy';image.decoding='async';
+image.onerror=()=>{image.onerror=null;image.src=illustration(i%3)};
+const cap=document.createElement('div');cap.className='photo-caption';
+const text=document.createElement('div'),title=document.createElement('h3'),date=document.createElement('p');
+title.textContent=m.title;date.textContent=m.date;title.contentEditable='true';title.setAttribute('aria-label','Edit memory caption');title.addEventListener('blur',()=>{m.title=title.textContent.trim()||'Our little memory';save('ever-memories',memories)});
+text.append(title,date);const heart=document.createElement('span');heart.className='card-heart';heart.textContent='♡';cap.append(text,heart);
+const replace=document.createElement('button');replace.className='replace-photo';replace.textContent='↺';replace.setAttribute('aria-label','Replace '+m.title);replace.onclick=()=>{replaceIndex=i;$('photoInput').multiple=false;$('photoInput').click()};
+card.append(image,replace,cap);$('memoryGrid').append(card);
+});
+}
+renderMemories();
+$('addPhotos').onclick=()=>{replaceIndex=null;$('photoInput').multiple=true;$('photoInput').click()};
+function imageData(file){return new Promise((resolve,reject)=>{
+if(!file.type.startsWith('image/'))return reject(new Error('Please choose an image.'));
+const url=URL.createObjectURL(file),img=new Image();img.onload=()=>{const ratio=Math.min(1,1000/Math.max(img.width,img.height)),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*ratio));canvas.height=Math.max(1,Math.round(img.height*ratio));canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);URL.revokeObjectURL(url);resolve(canvas.toDataURL('image/jpeg',.82))};img.onerror=()=>{URL.revokeObjectURL(url);reject(new Error('This image format could not be opened. Try JPG or PNG.'))};img.src=url;
+})}
+$('photoInput').onchange=async e=>{
+const files=[...e.target.files];if(!files.length)return;
+try{
+for(const file of files){const src=await imageData(file);if(replaceIndex!==null){memories[replaceIndex].src=src;break}memories.push({src,title:'Another little moment',date:'A MEMORY TO KEEP'})}
+renderMemories();const persisted=save('ever-memories',memories);toast(persisted?'Your memories are right where they belong ♡':'Photos added. Keep this page open to keep your previews.');
+}catch(err){toast(err.message)}
+e.target.value='';
+};
+const message=$('loveMessage');message.textContent=read('ever-message',message.textContent);
+let editing=false;
+$('editMessage').onclick=()=>{editing=!editing;message.contentEditable=String(editing);$('editMessage').textContent=editing?'✓ Save my little message':'✎ Make this message yours';if(editing){message.focus()}else{save('ever-message',message.textContent);toast('A little piece of your heart, saved ♡')}};
+let milestones=read('ever-timeline',null)||[
+{title:'The Day We Met',date:'JUNE 14, 2022',text:"An ordinary day, until you walked into it. I didn't know it yet, but my favorite story was about to begin."},
+{title:'Our First Conversation',date:'JUNE 16, 2022',text:'A simple hello turned into hours of talking. Somehow, you already felt like someone I had always known.'},
+{title:'Our First Special Memory',date:'JULY 02, 2022',text:'We got a little lost, laughed a little too much, and made a memory I would keep forever.'},
+{title:'The Moment I Knew',date:'NOVEMBER 20, 2022',text:"It wasn't a grand gesture. It was the quiet feeling of being completely myself with you."},
+{title:'Today ❤️',date:'STILL CHOOSING YOU',text:'More memories, more laughter, more us. My favorite part of our story is that we are still writing it.'}
+];
+milestones.forEach((m,i)=>{
+const wrap=document.createElement('div');wrap.className='milestone';
+wrap.innerHTML='<span class="timeline-dot" aria-hidden="true">'+(i===4?'♥':'✦')+'</span>';
+const details=document.createElement('details');if(i===0)details.open=true;
+const summary=document.createElement('summary'),title=document.createElement('span'),date=document.createElement('span'),icon=document.createElement('span');
+title.className='milestone-title';title.textContent=m.title;date.className='date-label';date.textContent=m.date;icon.className='expand-icon';icon.textContent='+';icon.setAttribute('aria-hidden','true');summary.append(title,date,icon);
+const body=document.createElement('div');body.className='milestone-body';
+const p=document.createElement('p');p.textContent=m.text;
+const tools=document.createElement('div');tools.className='milestone-tools';
+const edit=document.createElement('button');edit.textContent='✎ Edit this chapter';let active=false;
+edit.onclick=()=>{active=!active;[title,date,p].forEach(el=>el.contentEditable=String(active));edit.textContent=active?'✓ Save chapter':'✎ Edit this chapter';if(active){p.focus()}else{m.title=title.textContent;m.date=date.textContent;m.text=p.textContent;save('ever-timeline',milestones);toast('Your chapter is saved ♡')}};
+[title,date].forEach(el=>{el.addEventListener('click',e=>{if(active)e.preventDefault()});el.addEventListener('keydown',e=>{if(active)e.stopPropagation()})});
+const add=document.createElement('button');add.textContent='＋ Add a photo';const input=document.createElement('input');input.type='file';input.accept='image/*';input.className='visually-hidden';input.setAttribute('aria-label','Add photo to '+m.title);
+let photo;
+function showPhoto(src){if(!photo){photo=document.createElement('img');photo.className='timeline-photo';photo.alt='A photo from this chapter';body.append(photo)}photo.src=src;add.textContent='↺ Replace photo'}
+add.onclick=()=>input.click();
+input.onchange=async()=>{if(!input.files[0])return;try{m.photo=await imageData(input.files[0]);showPhoto(m.photo);save('ever-timeline',milestones)}catch(e){toast(e.message)}input.value=''};
+tools.append(edit,add,input);body.append(p,tools);if(m.photo)showPhoto(m.photo);
+details.append(summary,body);wrap.append(details);$('timeline').append(wrap);
+});
+function burst(count=28){
+if(reduced)return;
+for(let i=0;i<count;i++){const el=document.createElement('span');el.className='burst';el.textContent=['♡','♥','✧','✦'][i%4];el.style.left=(30+Math.random()*40)+'vw';el.style.top=(45+Math.random()*20)+'vh';el.style.color=['#dba4bc','#cbb4d7','#c889a5','#e6bcaa'][i%4];el.style.fontSize=(12+Math.random()*20)+'px';el.style.setProperty('--dx',(Math.random()-.5)*500+'px');el.style.setProperty('--dy',(-120-Math.random()*380)+'px');el.style.setProperty('--rot',(Math.random()-.5)*160+'deg');el.style.animationDelay=Math.random()*.5+'s';document.body.append(el);setTimeout(()=>el.remove(),4200)}
+}
+let returnFocus;
+function closeModal(){$('heartModal').classList.remove('open');document.body.style.overflow='';if(returnFocus)returnFocus.focus()}
+$('openHeart').onclick=()=>{returnFocus=document.activeElement;$('heartModal').classList.add('open');document.body.style.overflow='hidden';$('closeModal').focus();burst(36)};
+$('closeModal').onclick=closeModal;$('heartModal').onclick=e=>{if(e.target===$('heartModal'))closeModal()};
+$('sendLove').onclick=()=>{burst(40);toast('Consider this a very long, very warm hug ♡')};
+document.addEventListener('keydown',e=>{
+if(!$('heartModal').classList.contains('open'))return;
+if(e.key==='Escape')closeModal();
+if(e.key==='Tab'){const first=$('closeModal'),last=$('sendLove');if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+});
+$('oneMore').onclick=()=>{const open=$('extraMessage').classList.toggle('open');$('oneMore').setAttribute('aria-expanded',String(open));if(open)burst(12)};
+
+// A quiet, original music-box soundtrack synthesized locally. No autoplay or audio downloads.
+let audio,master,isPlaying=false,musicTimer,noteIndex=0;
+const melody=[261.63,329.63,392,523.25,440,392,329.63,293.66,261.63,349.23,440,523.25,493.88,392,329.63,293.66];
+function playNote(){
+if(!audio||!isPlaying)return;
+const now=audio.currentTime;
+const ring=(frequency,volume,duration)=>{const osc=audio.createOscillator(),gain=audio.createGain();osc.type='sine';osc.frequency.value=frequency;gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(volume,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+duration);osc.connect(gain);gain.connect(master);osc.start(now);osc.stop(now+duration+.1)};
+ring(melody[noteIndex%melody.length],.13,2.4);
+if(noteIndex%4===0){const base=noteIndex%8===0?130.81:174.61;ring(base,.065,4);ring(base*1.5,.035,4)}
+noteIndex++;musicTimer=setTimeout(playNote,760);
+}
+$('musicButton').onclick=async()=>{
+try{
+if(!audio){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw new Error('Audio is not supported in this browser.');audio=new AC();master=audio.createGain();master.gain.value=.65;master.connect(audio.destination)}
+if(isPlaying){isPlaying=false;clearTimeout(musicTimer);await audio.suspend()}else{await audio.resume();isPlaying=true;playNote()}
+$('musicButton').classList.toggle('playing',isPlaying);$('musicButton').setAttribute('aria-pressed',String(isPlaying));$('musicLabel').textContent=isPlaying?'Pause our soundtrack':'Play our soundtrack';
+}catch(err){toast('Music is unavailable in this browser.')}
+};
+let pointerX=0,pointerY=0;
+const glow=document.querySelector('.cursor-glow');
+if(matchMedia('(pointer:fine)').matches){document.addEventListener('pointermove',e=>{pointerX=(e.clientX/window.innerWidth-.5)*2;pointerY=(e.clientY/window.innerHeight-.5)*2;glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true})}
+const art=document.querySelector('.hero-art');
+art.addEventListener('pointermove',e=>{const b=art.getBoundingClientRect();pointerX=(e.clientX-b.left)/b.width*2-1;pointerY=(e.clientY-b.top)/b.height*2-1},{passive:true});
+art.addEventListener('pointerleave',()=>{pointerX=pointerY=0});
+try{
+if(!window.THREE)throw new Error('3D unavailable');
+const THREE=window.THREE,stage=$('heartStage');
+const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.7));renderer.setClearColor(0,0);stage.append(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,.1,100);camera.position.z=8;
+scene.add(new THREE.HemisphereLight(0xfff5ee,0xbd729a,2.8));
+const key=new THREE.DirectionalLight(0xffefe7,4);key.position.set(-3,4,6);scene.add(key);
+const light=new THREE.DirectionalLight(0xd6b4ed,2);light.position.set(3,-1,2);scene.add(light);
+const shape=new THREE.Shape();shape.moveTo(0,-.95);shape.bezierCurveTo(-.25,-.66,-1.25,0,-1.25,.65);shape.bezierCurveTo(-1.25,1.5,-.25,1.65,0,.94);shape.bezierCurveTo(.25,1.65,1.25,1.5,1.25,.65);shape.bezierCurveTo(1.25,0,.25,-.66,0,-.95);
+const geo=new THREE.ExtrudeGeometry(shape,{depth:.36,bevelEnabled:true,bevelSegments:7,steps:1,bevelSize:.19,bevelThickness:.22,curveSegments:40});geo.center();
+const heart=new THREE.Mesh(geo,new THREE.MeshPhysicalMaterial({color:0xeaa4b8,metalness:.12,roughness:.24,clearcoat:1,clearcoatRoughness:.17}));heart.rotation.set(-.1,-.28,-.12);scene.add(heart);
+const points=[];for(let i=0;i<36;i++)points.push((Math.random()-.5)*7,(Math.random()-.5)*6,(Math.random()-.5)*3-1);
+const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.Float32BufferAttribute(points,3));
+const particles=new THREE.Points(pg,new THREE.PointsMaterial({color:0xd8afc9,size:.027,transparent:true,opacity:.65}));scene.add(particles);
+function resize(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();heart.scale.setScalar(w<350?.87:1)}
+resize();if(window.ResizeObserver)new ResizeObserver(resize).observe(stage);else window.addEventListener('resize',resize);
+$('heartFallback').hidden=true;
+let visible=true;const clock=new THREE.Clock();
+if(window.IntersectionObserver)new IntersectionObserver(e=>{visible=e[0].isIntersecting}).observe(stage);
+function frame(){
+requestAnimationFrame(frame);if(!visible||document.hidden)return;
+const t=clock.getElapsedTime();
+if(!reduced){heart.position.y=Math.sin(t*.7)*.11;heart.rotation.y+=(-.28+pointerX*.21+Math.sin(t*.35)*.13-heart.rotation.y)*.035;heart.rotation.x+=(-.1+pointerY*.13-heart.rotation.x)*.035;heart.rotation.z=-.12+Math.sin(t*.5)*.035;particles.rotation.z=Math.sin(t*.1)*.08}
+renderer.render(scene,camera);
+}
+frame();
+}catch(e){/* The softly animated CSS heart remains available without WebGL. */}
+})();
+</script>
+</body>
+</html>
